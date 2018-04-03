@@ -3,6 +3,14 @@
 {% block title %} {{ post.title}} {% endblock %}
 
 
+<!-- {% block extra_head %}
+      
+       <style>
+           .post_photo { max-width: 300px;
+                         max-height: 300px;
+                        }
+       </style>
+        {% endblock %} -->
 
 {% block content %}
 
@@ -11,7 +19,7 @@
 
 
     {% if post.photo %}
-         <img src="{{ post.photo.url }}" />
+         <img src="{{ post.photo.url }}" class="post_photo" />
     {% endif %}     
     
 

@@ -5,5 +5,5 @@ urlpatterns = [
 #    url(r'^$', views.post_list),
     
      url(r'^$', views.index, name='index'),
-   
+     url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
 ]

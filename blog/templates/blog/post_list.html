@@ -1,16 +1,25 @@
 {% extends 'blog/layout.html' %}
 
-{% block content %}
+<!-- {% block extra_head %}
+      
+       <style>
+           .post_photo { max-width: 300px;
+                         max-height: 300px;
+                        }
+       </style>
+        {% endblock %}-->
+
+{% block content %} 
 
 
-
+<h1>ACE MARLINETECH</h1>
 
 {% for post in post_list %}
     
    
                 {{ post.published_date }}
           
-            <h1><a href="">
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">
                 {{ post.title }}
                 </a>
             </h1>
