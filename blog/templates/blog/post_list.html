@@ -1,0 +1,29 @@
+{% extends 'blog/layout.html' %}
+
+{% block content %}
+
+
+
+
+{% for post in post_list %}
+    
+   
+                {{ post.published_date }}
+          
+            <h1><a href="">
+                {{ post.title }}
+                </a>
+            </h1>
+           
+         
+             
+             {% if post.photo %}
+             <img src="{{ post.photo.url }}" class="post_photo" />
+             {% endif %}
+             
+          
+                 
+       {% endfor %}      
+               
+  {% endblock  %}
+              
