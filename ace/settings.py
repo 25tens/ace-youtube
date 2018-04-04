@@ -25,7 +25,7 @@ SECRET_KEY = 'rrov-6()=3ow($h+53-g+$ts(u3p@z*ye^-29=)2+ix+93ymu$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
 # Application definition
