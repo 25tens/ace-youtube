@@ -1,0 +1,88 @@
+body,html,.row-offcanvas {
+  height:100%;
+}
+
+body {
+    padding-top: 0px;
+}
+
+
+
+
+
+  .bg-secondary {
+/*  background-color: #2C3E50 !important;*/
+  /*background-color: #EEEBEB !important;  */
+  /* background-color: #2C3E50  !important;     */
+}
+  
+ .bg-primary {
+  background-color: #66a3ff !important;
+   /* nav button background-color*/
+}
+
+
+#sidebar {
+  width: inherit;
+  min-width: 220px;
+  max-width: 220px;
+  
+  background-color:#66ff66;
+  /*background-color:#f5f5f5;*/
+  float: left;
+  height:100%;
+  position:relative;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+
+#main {
+  height:100%;
+  overflow:auto;
+}
+
+
+
+/*
+ * off Canvas sidebar
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+     -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    width:calc(100% + 220px);
+  }
+    
+  .row-offcanvas-left
+  {
+    left: -220px;
+  }
+
+  .row-offcanvas-left.active {
+    left: 0;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+  }
+}
+
+
+.intro{
+   padding-top: 50px;
+}
+
+/*map*/
+.axgmap{
+    width: 
+        auto;
+  height: 420px;
+   
+  border: solid 1px #ccc;
+   
+}
