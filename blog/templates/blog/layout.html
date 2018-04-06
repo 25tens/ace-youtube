@@ -16,7 +16,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
 <!--      favicon-->
@@ -53,7 +52,8 @@
        </style>
    {% endblock %}  
   </head>
-  <body id="page-top">
+  <body>
+      
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top ">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -101,15 +101,14 @@
           <li class="active"><a href="#">Section</a></li>
           <li><a href="#">Section</a></li>
           <li><a href="#">Section</a></li>
-          <li><a href="#">Section</a></li>
-          <li><a href="#">Section</a></li>
+         
         </ul>
       </div>
   </div>
   <div id="main">
       <div class="col-md-12">
           <p class="visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">
+            <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
               <i class="glyphicon glyphicon-chevron-left"></i></button>
           </p>
          
@@ -121,10 +120,13 @@
                
                </div>
           </div>
+          
+          <section id="about">
           <div class="row">
+            <!--  <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
               <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
-              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
-              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
+              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>-->
+               <div class="col-md-12"><div class="well"><p>4 cols</p></div></div>
           </div>
 
 
@@ -156,10 +158,15 @@
               </div>
           
           </div>
+              
+              </section>   
+                         <!--          ends about-->
+          
+          <section id="product">
             <div class="row">
-              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
-              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
-              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
+              <div class="col-md-12"><div class="well"><p>4 cols</p></div></div>
+            
+            
           </div>
            <div class="row">
               <div class="col-md-6"><div class="">  <img src="{% static 'images/girl.png' %}" class="border" alt="image" width="300px" />
@@ -169,7 +176,7 @@
           </div>
           <div class="row">
   <div class="col-md-3">  <figure class="figure">
-            <img class="img-fluid img-thumbnail" src="{% static 'images/CONTROL%20STATIONS.jpg' %}" alt="CONTROL STATIONS">
+            <img class="img-fluid img-thumbnail" src="{% static 'images/CONTROLSTATIONS.jpg' %}" alt="CONTROL STATIONS">
           <figcaption class="figure-caption ">Control stations
 
 </figcaption>
@@ -177,7 +184,7 @@
              </div>
   <div class="col-md-3"> 
       <figure class="figure">
-            <img class="img-fluid img-thumbnail" src="{% static 'images/control%20unit.jpg' %}" alt="CONTROL UNIT">
+            <img class="img-fluid img-thumbnail" src="{% static 'images/controlunit.jpg' %}" alt="CONTROL UNIT">
          <figcaption class="figure-caption ">Control unit
 
 </figcaption>
@@ -197,10 +204,14 @@
 </figure>
 </div>
 </div>  
+  </section>
+          
+                  <!--          ends product-->
+          <section id="blog">
   <div class="row">
-              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
-              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
-              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
+              <div class="col-md-12"><div class="well"><p>4 cols</p></div></div>
+             
+            
           </div>  
             <div class="row">
               <div class="col-md-12 post text-center"><div class="">
@@ -211,7 +222,8 @@
                 </div>
             
           </div>     
-      </div>
+          </section>
+                  <!--          ends blog-->
    </div>
 </div><!--/row-offcanvas -->
    
@@ -264,11 +276,11 @@
       </div>
     </div>
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-to-top  position-fixed ">
+   <!-- <div class="scroll-to-top  position-fixed ">
       <a class="js-scroll-trigger  text-center text-white rounded" href="#page-top">
         <i class="fa fa-chevron-up"></i>
       </a>
-    </div>
+    </div>-->
      <script>
     // sandbox disable popups
     if (window.self !== window.top && window.name!="view1") {;

@@ -10,7 +10,9 @@ body {
 
 
 
-
+section {
+    padding:6rem 0;
+}
 
   .bg-secondary {
 /*  background-color: #2C3E50 !important;*/
@@ -29,19 +31,20 @@ body {
   min-width: 220px;
   max-width: 220px;
   
-  background-color:#;
-  /*background-color:#f5f5f5;*/
+ 
+background-color:;
   float: left;
   height:100%;
   position:relative;
   overflow-y:auto;
   overflow-x:hidden;
+   border: 1px solid #eee; 
 }
 
 
 #main {
 /*  height:100%;*/
- overflow:auto;
+/* overflow:auto;*/
 
 }
 
@@ -93,8 +96,8 @@ body {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #2C3E50;
-  color: #fff;
+/*  background-color: #2C3E50;*/
+  color: #000;
 }
 .copyright {
 /*  background-color: #1a252f;*/
