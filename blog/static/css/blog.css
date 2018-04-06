@@ -1,5 +1,7 @@
+
+
 body,html,.row-offcanvas {
-  height:100%;
+/*  height:100%;*/
 }
 
 body {
@@ -12,12 +14,12 @@ body {
 
   .bg-secondary {
 /*  background-color: #2C3E50 !important;*/
-  /*background-color: #EEEBEB !important;  */
-  /* background-color: #2C3E50  !important;     */
+   background-color: #EEEBEB !important;  
+  
 }
   
  .bg-primary {
-  background-color: #66a3ff !important;
+  background-color: #ffe6ff !important;
    /* nav button background-color*/
 }
 
@@ -27,7 +29,7 @@ body {
   min-width: 220px;
   max-width: 220px;
   
-  background-color:#66ff66;
+  background-color:#;
   /*background-color:#f5f5f5;*/
   float: left;
   height:100%;
@@ -38,8 +40,9 @@ body {
 
 
 #main {
-  height:100%;
-  overflow:auto;
+/*  height:100%;*/
+ overflow:auto;
+
 }
 
 
@@ -85,4 +88,29 @@ body {
    
   border: solid 1px #ccc;
    
+}
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #2C3E50;
+  color: #fff;
+}
+.copyright {
+/*  background-color: #1a252f;*/
+    background-color: #eee;
+}
+
+.scroll-to-top {
+  z-index: 1042;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+}
+
+.scroll-to-top a {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: rgba(33, 37, 41, 0.5);
+  line-height: 3.1rem;
 }
