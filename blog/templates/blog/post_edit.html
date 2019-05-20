@@ -1,0 +1,33 @@
+{% extends 'blog/layout.html' %}
+
+{% block content %}
+
+
+
+<div class="main-wrapper">
+
+
+   
+    	<div class=" card">
+    	<div class="card-header">
+    <h4 class="text-uppercase">New post</h4> 
+  </div>
+  <div class="card-body">
+   <form method="POST" action="">
+    {% csrf_token %}
+    {{ form.media }}
+    {{ form }}
+    <input type="submit" value="Save">
+ </form> 
+    
+  </div>
+
+   
+</div>
+ </div> 
+
+
+{% endblock %}
+
+ 
+  

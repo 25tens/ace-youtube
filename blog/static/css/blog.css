@@ -1,6 +1,9 @@
 
-
+html {
+  scroll-behavior: smooth;
+}
 body,html,.row-offcanvas {
+
 /*  height:100%;*/
 }
 

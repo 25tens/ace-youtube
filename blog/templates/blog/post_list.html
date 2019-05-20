@@ -1,44 +1,202 @@
 {% extends 'blog/layout.html' %}
+{% load static from staticfiles %}
 
  {% block extra_head %}
       
        <style>
-           .post_photo { max-width: 300px;
-                         max-height: 300px;
+           .post_photo { max-width: 400px;
+                         max-height: 350px;
                         }
        </style>
  {% endblock %}
 
 {% block content %} 
-
-
-<h1>ACE MARLINETECH</h1>
-
-{% for post in post_list %}
-    
-
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-       
-          <h4> {{ post.title }} </h4>  
-     
-     </div>
-        
-    
-    <div class="panel-body">
-        {% if post.photo %}
-         <img src="{{ post.photo.url }}" class="post_photo" />
-    {% endif %}   
-      </div>
-    <div class="panel-footer"> 
-        <p>{{ post.content|linebreaksbr }}</p>
-        <p>   {{ post.published_date }}</p>
-      </div>
-  </div>
-{% endfor %}      
+<div class="main-wrapper">
+  
+  <section class="blog-list px-3 py-5 p-md-5" id="blog">
+        <div class="container">
+          <h4 class="text-uppercase">blog</h4> 
+          {% for post in post_list %}
+          <div class="item mb-5">
+            <div class="media">
+               {% if post.photo %}
+              <img class="mr-3 img-fluid post_photo post-thumb d-md-flex " src="{{ post.photo.url }}" alt="image">
+               {% endif %}
+              <div class="media-body">
+                <h3 class="title mb-1"><a  href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
+               <div class="meta mb-1"> {{ post.published_date }}
+                  <!-- <span class="date">Published 2 days ago</span><span class="time">5 min read</span><span class="comment"><a href="#">8 comments</a></span> -->
+                </div>
                
-  {% endblock  %}
+               <a class="more-link" href="{% url 'post_detail' pk=post.pk %}">Read more &rarr;</a> 
+              </div><!--//media-body-->
+            </div><!--//media-->
+          </div><!--//item-->
+          {% endfor %} 
+        </div>
+  </section>
+  <section class="blog-list px-3 py-5 p-md-5" id="blog">
+        <div class="container">
+        
+          {% for post in post_list %}
+          <div class="item mb-5">
+            <div class="media">
+               
+              <div class="media-body">
+                {{ post.description2 | safe }}
+                </div>
+               
+              </div><!--//media-body-->
+            </div><!--//media-->
+            {% endfor %} 
+          </div><!--//item-->
+          
+       
+  </section>
+   <section class="blog-list px-3 py-5 p-md-5" >
+   <div class="container">
+   <div class="row">
+             <div class="col-lg-6 col-sm-6" id="about"><div class="well">
+             <h4 class="text-uppercase mb-4">about us</h4>   
+              <p>Our company, specialized in outboards, is adjacent to Busan, a world-class marine tourism city. So we can play a big role in the maritime industry.
+              <br> <br>
+              Honesty and sincerity, product quality and price competitiveness equally, we pursue customer satisfaction for various needs of each customer. <br> <br>
+              We are always doing our best and now we are selling high quality products of world famous brands in marine equipment field.
+              <br> <br>
+              Thank you for giving us the opportunity to serve you.
+              </p>
+              </div>
+              <img class="img-responsive" src="{% static 'images/ceo3.jpg' %}" width="" alt=""
+                  style="margin: 0 auto;">
+            </div>
+
+              <div class="col-lg-6 col-sm-6" id="contact" style="padding-left:5%" >
+
+
+    <h4 class="text-uppercase mb-4">Location</h4>
+
+            <p>80-16, Golden root-ro, <br>Juchon-myeon, Gimhae-si,<br> Republic of Korea
+              </p>
+            <p class="lead mb-0">
+
+  <i class="fa fa-phone-square" aria-hidden="true"></i>
+
+  <font color="">
+        &nbsp; &nbsp; <small>+82-70-8621-3464 </small></font>
+                                  </p>
+
+
+ <p class="lead mb-0">
+  <i class="fas fa-comment-dots" aria-hidden="true"></i>
+     <font color="">
+&nbsp; &nbsp; <small>+82-10-3867-9902 </small></font>
+              </p>
+<p class="lead mb-0"> 
+  <i class="fa fa-globe" aria-hidden="true"></i>
+    &nbsp; &nbsp;<small> www.acemarinetech.com </small>
+  </p>
+
+<p class="lead mb-0"> 
+  <i class="fas fa-envelope-square" aria-hidden="true"></i>
+    &nbsp; &nbsp;<small> info@acemarinetech.com </small>
+  </p>
+   <div class="my-2 my-md-3">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> Get Email </button> 
+        </div>
+        <!-- The Modal -->
+    <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">contact us</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <form class="form-horizontal" role="form" method="post"  action="https://formspree.io/ds5eis2@gmail.com">
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="message" class="col-sm-2 control-label">Message</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" rows="4" name="message"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-10 col-sm-offset-2">
+      <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-10 col-sm-offset-2">
+      <! Will be used to display an alert to the user>
+    </div>
+  </div>
+</form>
+
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>    
+<h4 class="text-uppercase mb-4">aeound the web</h4>     
+           <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<!--<a class="a2a_dd" href="https://www.addtoany.com/share"></a>-->
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+<a class="a2a_button_kakao"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+       </div>
+           
+            
+            
+         
+              <!-- google map css는 blog.css 
+              <div class="col-lg-6 col-sm-6 map-responsive">
+              <div class="axgmap" data-latlng="35.871435, 128.601445" data-zoom="7">
+              <div data-latlng="35.179554, 129.075642" data-title="Busan" >
+              <h4><a href="https://english.visitkorea.or.kr:1001/enu/SI/SI_EN_3_6.jsp?cid=259290" style="text-decoration:none"> Marine City,Busan</a></h4>
+              <p><img src="http://www.korea.net/upload/content/editImage/20160304_Ma_16.jpg" width="195"></p>
+    
+             </div>
+             <div data-latlng="35.228545, 128.889352" data-title="Where We Are" data-window-open="true">
+             <h4>Where We Are</h4>
+             <p><img src="{% static 'images/20160203000163_0.jpg' %}" width="195"></p>
+    
+             </div>
+
+             </div>
+            </div>-->
+          
+   </div><!--//row-->
+   </div>
+ </section>
+</div>  
+ {% endblock  %}
       
    
    

@@ -1,0 +1,183 @@
+<div id="main">
+      <div class="col-md-12">
+          <p class="visible-xs">
+            <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas">
+              <i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+         
+          <div class="row">
+              <div class="col-md-12 intro text-center" >
+                  <img class="img-responsive" src="{% static 'images/head3.png' %}" width="550px" alt="" 
+                  style="margin: 0 auto;">
+                   <h2 class="font-weight-light" id="">Make yours on the water more enjoyable<br> </h2>
+               
+               </div>
+          </div>
+          
+          <section id="about">
+          <div class="row">
+            <!--  <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
+              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>
+              <div class="col-md-4"><div class="well"><p>4 cols</p></div></div>-->
+               <div class="col-md-12"><div class="well"><p>4 cols</p></div></div>
+          </div>
+
+
+          <div class="row">
+             <div class="col-lg-6 col-sm-6"><div class="well">
+              <p>Our company, specialized in outboards, is adjacent to Busan, a world-class marine tourism city. So we can play a big role in the maritime industry.
+              <br> <br>
+              Honesty and sincerity, product quality and price competitiveness equally, we pursue customer satisfaction for various needs of each customer. <br> <br>
+              We are always doing our best and now we are selling high quality products of world famous brands in marine equipment field.
+              <br> <br>
+              Thank you for giving us the opportunity to serve you.
+              </p>
+              </div></div>
+              <!-- google map css는 blog.css -->
+              <div class="col-lg-6 col-sm-6 map-responsive">
+              <div class="axgmap" data-latlng="35.871435, 128.601445" data-zoom="7">
+              <div data-latlng="35.179554, 129.075642" data-title="Busan" >
+              <h4><a href="https://english.visitkorea.or.kr:1001/enu/SI/SI_EN_3_6.jsp?cid=259290" style="text-decoration:none"> Marine City,Busan</a></h4>
+              <p><img src="http://www.korea.net/upload/content/editImage/20160304_Ma_16.jpg" width="195"></p>
+    
+             </div>
+             <div data-latlng="35.228545, 128.889352" data-title="Where We Are" data-window-open="true">
+             <h4>Where We Are</h4>
+             <p><img src="{% static 'images/20160203000163_0.jpg' %}" width="195"></p>
+    
+             </div>
+
+           </div>
+              </div>
+          
+          </div>
+              
+              </section>   
+                         <!--          ends about-->
+          
+          <section id="product">
+            <div class="row">
+              <div class="col-md-12"><div class="well">
+                <p>4 cols</p>
+                <video width="320" height="240" controls>
+  <source src="{% static 'video/D%U00E9fil%U00E9 de Jellyfishbots dans le port de Cassis.mp4' %}" type="video/mp4">
+ 
+  Your browser does not support the video tag.
+</video>
+              </div></div>
+            
+            
+          </div>
+           <div class="row">
+              <div class="col-md-6"><div class="">  <img src="{% static 'images/girl.png' %}" class="border" alt="image" width="300px" />
+              </div></div>
+              <div class="col-md-6"><div class=""><p>POWER A MARK II™ --- using reliable and precise digital data transmission, this single or dual function control system is specifically designed to work on mechanically controlled as well as electronic and electro-hydraulic gas and diesel inboards, sterndrives and outboards.</p></div></div>
+            <!--   <div class="col-md-4"><div class="well"><p>4 cols</p></div></div> -->
+          </div>
+          <div class="row">
+  <div class="col-md-3">  <figure class="figure">
+            <img class="img-fluid img-thumbnail" src="{% static 'images/CONTROLSTATIONS.jpg' %}" alt="CONTROL STATIONS">
+          <figcaption class="figure-caption ">Control stations
+
+</figcaption>
+               </figure>  
+             </div>
+  <div class="col-md-3"> 
+      <figure class="figure">
+            <img class="img-fluid img-thumbnail" src="{% static 'images/controlunit.jpg' %}" alt="CONTROL UNIT">
+         <figcaption class="figure-caption ">Control unit
+
+</figcaption>
+ </figure>  
+             </div>
+  <div class="col-md-3">
+     <figure class="figure">
+            <img class="img-fluid img-thumbnail" src="{% static 'images/E-TROLLER.jpg' %}" alt="E-TROLL ELECTRONIC">
+               <figcaption class="figure-caption ">E-TROLL electronic
+</figcaption>
+ </figure> 
+</div>
+  <div class="col-md-3"><figure class="figure">
+            <img class="img-fluid img-thumbnail" src="{% static 'images/MACTUATOR.jpg' %}" alt="M-ACTUATOR">
+         <figcaption class="figure-caption ">M-Actuator
+</figcaption>
+</figure>
+</div>
+</div>  
+  </section>
+          
+                  <!--          ends product-->
+          <section id="blog">
+  <div class="row">
+              <div class="col-md-12"><div class="well"><p>4 cols</p></div></div>
+             
+            
+          </div>  
+            <div class="row">
+              <div class="col-md-12 post text-center"><div class="">
+              
+                  {% block content %}
+                  {% endblock %}
+              </div>
+                </div>
+            
+          </div>     
+          </section>
+                  <!--          ends blog-->
+   </div>
+</div><!--/row-offcanvas -->
+
+ <!-- Footer -->
+    <footer class="footer" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 ">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead mb-0">80-16, Golden root-ro, <br>Juchon-myeon, Gimhae-si,<br> Republic of Korea
+              </p>
+          </div>
+          <div class="col-md-4 ">
+            <h4 class="text-uppercase mb-4">Around the Web</h4>
+           <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<!--<a class="a2a_dd" href="https://www.addtoany.com/share"></a>-->
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+<a class="a2a_button_kakao"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+         
+          </div>
+          <div class="col-md-4" >
+            <h4 class="text-uppercase mb-4">About ME</h4>
+   
+  <p class="lead mb-0">
+  <i class="fa fa-phone-square" aria-hidden="true"></i>
+
+  <font color=""> &nbsp; &nbsp;+82-70-8621-3464</font>
+</p>
+ <p class="lead mb-0"> <i class="fa fa-envelope" aria-hidden="true"></i> 
+&nbsp; &nbsp; home@ace-marinetech.com</p>
+<p class="lead mb-0"> <i class="fa fa-globe" aria-hidden="true"></i>
+ &nbsp; &nbsp; www.ace-marinetech.com </p>
+            
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+      
+<div class="copyright py-4 text-center">
+      <div class="container">
+<!--        <small>Copyright &copy; ACE MarineTech  2018</small>-->
+           <p>Copyright &copy; <a  href="#page-top" style="color: #18BC9C">ACE MarineTech </a>2018</p>
+      </div>
+    </div>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+   <!-- <div class="scroll-to-top  position-fixed ">
+      <a class="js-scroll-trigger  text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>-->

@@ -17,10 +17,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import include, url
 from django.contrib import admin
-
+from blog import views
+from blog import views as blog_views 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^blog/', include('blog.urls')),
     url(r'', include('blog.urls')),
+    url('ckeditor/', include('ckeditor_uploader.urls')), # < here
+    url('add/post/', blog_views.add_post, name='add_post'), # < here
+    url('edit/post/<int:post_id>/', blog_views.edit_post, name='edit_post'), # < here
+   
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

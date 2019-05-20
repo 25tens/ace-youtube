@@ -14,32 +14,45 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-    <div class="col-sm-12">
-<h2>Panel Footer</h2>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-        <div class="well">
-          <h1> {{ post.title }} </h1>  
-      </div>
-     </div>
-        
-    
-    <div class="panel-body">
-        {% if post.photo %}
-         <img src="{{ post.photo.url }}" class="post_photo" />
-    {% endif %}   
-      </div>
-    <div class="panel-footer"> 
-        <p>{{ post.content|linebreaksbr }}</p>
-        <p>   {{ post.published_date }}</p>
-      </div>
-  </div>
-        </div>
-        </div>
-    </div>
 
- <hr/>
+  <div class="main-wrapper">
+      
+      <article class="blog-post px-3 py-5 p-md-5">
+        <div class="container">
+          <header class="blog-post-header">
+            <h2 class="title mb-2">{{ post.title }}</h2>
+
+            <div class="meta mb-3">{{ post.published_date }}
+             <!--  <span class="date">Published 3 months ago</span><span class="time">5 min read</span><span class="comment"><a href="#">4 comments</a></span>  -->
+            </div>
+          </header>
+  
+          <div class="blog-post-body">
+           <figure class="blog-banner">
+                {% if post.photo %}
+                <img class="img-fluid" src="{{ post.photo.url }}" alt="image">
+                {% endif %}  
+                
+             <p> {{ post.description | safe }}
+                {{ post.description2 | safe }} 
+             <!--  {{ post.content|linebreaksbr }} -->
+               
+             </p>
+            <!--  <p>{{ post.published_date }}</p> -->
+             <input type="button" value="return" class="btn btn-primary btn-lg rounded-0 mt-3" onClick="javascript:history.go(-1);">
+          </div>  
+        </div>
+           
+      </article>
+         <!--  <nav class="blog-nav nav nav-justified my-5">
+          <a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+          <a class="nav-link-next nav-item nav-link rounded-right" href="blog-list.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+        </nav> -->
+  </div>
+
+
+
+
+ 
 
 {% endblock %}

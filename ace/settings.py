@@ -25,20 +25,40 @@ SECRET_KEY = 'rrov-6()=3ow($h+53-g+$ts(u3p@z*ye^-29=)2+ix+93ymu$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'www.acemarinetech.com' ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+   
+    'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
+CKEDITOR_UPLOAD_PATH = "uploads/" # < here
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'height': 500,
+        'toolbar_Custom': [
+            ['Bold', 'Link', 'Unlink', 'Image'],
+        ],
+    },
+    'special': {
+        'toolbar': 'Special',
+        'toolbar_Special': [
+            ['Bold'],
+        ],
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,6 +83,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
             ],
         },
     },
