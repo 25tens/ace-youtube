@@ -13,7 +13,7 @@ class Post(models.Model):
     description = RichTextUploadingField(blank=True, null=True)
     description2 = RichTextUploadingField(blank=True, null=True, config_name='special')
     is_public = models.BooleanField(default=False)
-#    새로운 필드 추가 makemigrations
+
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
